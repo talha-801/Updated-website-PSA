@@ -1,0 +1,52 @@
+/* ============================================================
+   TOPBAR.CSS — Announcement / Ticker Bar
+   Pride Study Abroad | PSA Website
+   ============================================================ */
+
+.top-bar {
+  background-color: var(--brand-burgundy-dark);
+  color: #fda4af;
+  font-size: 0.85rem;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  width: 100%;
+}
+
+.top-bar-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.ticker-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.ticker-scroll {
+  display: flex;
+  white-space: nowrap;
+  gap: 40px;
+  animation: tickerSlide 40s linear infinite;
+}
+
+.ticker-scroll:hover {
+  animation-play-state: paused;
+}
+
+.ticker-item {
+  color: #f1f5f9;
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+
+.ticker-item strong {
+  color: #fecdd3;
+}
+
+@keyframes tickerSlide {
+  0%   { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}

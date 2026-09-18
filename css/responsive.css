@@ -1,0 +1,218 @@
+/* ============================================================
+   RESPONSIVE.CSS — Media Queries / Breakpoints
+   Pride Study Abroad | PSA Website
+
+   Breakpoints:
+     992px → Tablet
+     768px → Mobile
+     680px → Form (small mobile)
+     480px → Small Phone
+   ============================================================ */
+
+/* ── 992px: Tablet ──────────────────────────────────────── */
+@media (max-width: 992px) {
+
+  /* Nav */
+  .menu-toggle  { display: block; }
+  .desktop-cta  { display: none; }
+
+  .nav-links {
+    position: absolute;
+    top: 74px;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 16px;
+    border-bottom: 2px solid var(--brand-burgundy);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 999;
+  }
+
+  .nav-links.nav-open { display: flex; }
+  .nav-links li        { width: 100%; }
+
+  .nav-links a.nav-link-item {
+    display: block;
+    width: 100%;
+    font-size: 0.95rem;
+    padding: 8px 0;
+    border-bottom: 1px solid #f1f5f9;
+  }
+
+  .mobile-cta-item               { display: block; width: 100%; padding-top: 8px; }
+  .mobile-cta-item .nav-btn-wa   { width: 100%; justify-content: center; }
+
+  /* Hero */
+  .hero-glass-card h1  { font-size: 2.2rem; }
+  .hero-glass-card     { max-width: 90%; padding: 36px 28px; }
+
+  /* Grids → 2-col */
+  .services-grid      { grid-template-columns: repeat(2, 1fr); }
+  .reviews-grid       { grid-template-columns: repeat(2, 1fr); }
+  .destinations-grid  { grid-template-columns: repeat(2, 1fr); }
+
+  /* About, Offices, Footer → 1-col */
+  .about-grid,
+  .why-pride-features,
+  .offices-modern-grid,
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  /* CTA Box */
+  .cta-final-box h2 { font-size: 2rem; }
+}
+
+/* ── 768px: Mobile ──────────────────────────────────────── */
+@media (max-width: 768px) {
+
+  /* Container */
+  .container { padding: 0 18px; }
+
+  /* Section spacing */
+  .services-section,
+  .reviews-section,
+  .destinations-section-full,
+  .about-section,
+  .contact-section,
+  .inquiry-form-section,
+  .cta-final-section {
+    padding: 36px 0;
+  }
+
+  /* Section header text */
+  .section-header h2 { font-size: 1.75rem; }
+  .section-header p  { font-size: 0.9rem; }
+
+  /* Hero */
+  .hero-section       { min-height: 100svh; }
+  .hero-glass-card    { max-width: 100%; padding: 30px 22px; border-radius: 18px; }
+  .hero-glass-card h1 { font-size: 1.85rem; line-height: 1.2; }
+  .hero-sub-text      { font-size: 0.95rem; }
+  .hero-desc          { font-size: 0.88rem; }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .btn-primary,
+  .btn-outline-explore {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 20px;
+  }
+
+  /* Hero Stats Strip */
+  .hero-stats-strip { gap: 14px; padding-top: 16px; margin-top: 18px; }
+  .hero-stat strong { font-size: 1.25rem; }
+  .hero-stat-sep    { display: none; }
+
+  /* Services → 1-col */
+  .services-grid  { grid-template-columns: 1fr; gap: 18px; }
+  .srv-icon-header { padding: 22px 20px; }
+  .srv-body        { padding: 18px 20px 22px; }
+
+  /* Reviews → 1-col */
+  .reviews-grid      { grid-template-columns: 1fr; gap: 16px; }
+  .review-card-inner { padding: 22px 20px 20px; }
+
+  /* Destinations → 1-col */
+  .destinations-grid { grid-template-columns: 1fr; gap: 16px; }
+
+  /* About section */
+  .about-section .container { text-align: center; }
+  .about-highlights          { justify-content: center; }
+
+  /* Offices */
+  .offices-modern-grid { grid-template-columns: 1fr; gap: 20px; }
+  .office-modern-card  { padding: 0; }
+
+  /* Inquiry Form */
+  .form-row              { grid-template-columns: 1fr; }
+  .inquiry-form          { padding: 22px 18px; }
+  .form-tab-btn          { font-size: 0.78rem; padding: 14px 10px; gap: 5px; }
+  .inquiry-form-wrapper  { border-radius: 16px; }
+
+  /* CTA Box */
+  .cta-final-box    { padding: 36px 22px; border-radius: 18px; }
+  .cta-final-box h2 { font-size: 1.6rem; }
+  .cta-final-box p  { font-size: 0.9rem; }
+  .btn-cta-big      { padding: 14px 24px !important; font-size: 0.95rem !important; width: 100%; justify-content: center; }
+
+  /* Footer */
+  .footer-content         { grid-template-columns: 1fr; gap: 28px; padding-bottom: 28px; }
+  footer                  { padding: 44px 0 0; }
+  .footer-bottom-content  { flex-direction: column; text-align: center; gap: 10px; }
+  .footer-connect-links   { flex-direction: row; flex-wrap: wrap; }
+
+  /* Navbar height adjust */
+  .nav-links { top: 68px; }
+}
+
+/* ── 680px: Form breakpoint ─────────────────────────────── */
+@media (max-width: 680px) {
+  .form-row       { grid-template-columns: 1fr; }
+  .inquiry-form   { padding: 24px 20px; }
+  .form-tab-btn   { font-size: 0.78rem; padding: 14px 10px; gap: 5px; }
+}
+
+/* ── 480px: Small Phone ─────────────────────────────────── */
+@media (max-width: 480px) {
+
+  /* Container */
+  .container { padding: 0 14px; }
+
+  /* Hero */
+  .hero-glass-card    { padding: 24px 16px; border-radius: 16px; }
+  .hero-glass-card h1 { font-size: 1.55rem; }
+  .hero-sub-text      { font-size: 0.88rem; }
+  .hero-desc          { font-size: 0.83rem; }
+
+  /* Hero stats — stack vertically */
+  .hero-stats-strip {
+    flex-direction: column;
+    gap: 10px;
+    border-top: 1px solid rgba(0, 0, 0, 0.07);
+    padding-top: 14px;
+  }
+
+  .hero-stat         { flex-direction: row; gap: 8px; align-items: center; }
+  .hero-stat strong  { font-size: 1.1rem; }
+  .hero-stat span    { font-size: 0.7rem; text-align: left; }
+
+  /* Service cards */
+  .service-box h4 { font-size: 1rem; }
+  .service-box p  { font-size: 0.84rem; }
+
+  /* Review cards */
+  .reviewer-meta h5        { font-size: 0.88rem; }
+  .review-text-content     { font-size: 0.84rem; }
+  .review-clean-card::after { height: 3px; }
+
+  /* Section headers */
+  .section-header h2 { font-size: 1.5rem; }
+  .section-tag       { font-size: 0.72rem; }
+
+  /* Inquiry form */
+  .inquiry-form  { padding: 18px 14px; }
+  .form-tab-btn  { padding: 12px 8px; font-size: 0.72rem; flex-direction: column; gap: 4px; }
+
+  /* CTA Box */
+  .cta-final-box h2 { font-size: 1.4rem; }
+
+  /* Floating WA button */
+  .floating-wa { width: 50px; height: 50px; font-size: 1.6rem; bottom: 16px; right: 16px; }
+
+  /* Footer */
+  .footer-col h5     { font-size: 0.95rem; }
+  .footer-connect-links   { flex-direction: column; }
+  .footer-fb-link,
+  .footer-wa-link    { justify-content: center; }
+}

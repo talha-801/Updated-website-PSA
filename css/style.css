@@ -1,0 +1,22 @@
+/* ============================================================
+   STYLE.CSS — Master CSS Entry Point
+   Pride Study Abroad | PSA Website
+
+   This file lives in: css/style.css
+   It is referenced from: Assets/index.html as ../css/style.css
+
+   Import order (cascade matters):
+     1. base       → design tokens, reset, global utilities
+     2. topbar     → announcement ticker bar
+     3. navbar     → sticky header & navigation
+     4. hero       → home hero slideshow section
+     5. sections   → all other page sections
+     6. responsive → media queries (always last)
+   ============================================================ */
+
+@import url('base.css');
+@import url('topbar.css');
+@import url('navbar.css');
+@import url('hero.css');
+@import url('sections.css');
+@import url('responsive.css');
